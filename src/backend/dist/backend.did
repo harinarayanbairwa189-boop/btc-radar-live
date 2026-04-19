@@ -1,0 +1,55 @@
+type http_request_result = 
+ record {
+   body: blob;
+   headers: vec http_header;
+   status: nat;
+ };
+type http_header = 
+ record {
+   name: text;
+   value: text;
+ };
+type TransformationOutput = 
+ record {
+   body: blob;
+   headers: vec http_header;
+   status: nat;
+ };
+type TransformationInput = 
+ record {
+   context: blob;
+   response: http_request_result;
+ };
+type PriceSnapshot = 
+ record {
+   inr: float64;
+   lastUpdated: int;
+   usd: float64;
+ };
+type FetchResult = 
+ record {
+   articles: vec Article;
+   inr: float64;
+   sentimentAvg: float64;
+   usd: float64;
+ };
+type Candle = 
+ record {
+   close: float64;
+   high: float64;
+   low: float64;
+   open: float64;
+   timestamp: int;
+ };
+type Article = 
+ record {
+   sentiment: float64;
+   title: text;
+   url: text;
+ };
+service : {
+  fetchAndUpdatePrice: () -> (FetchResult);
+  getLatestPrice: () -> (PriceSnapshot) query;
+  getOHLCHistory: () -> (vec Candle) query;
+  transform: (input: TransformationInput) -> (TransformationOutput) query;
+}

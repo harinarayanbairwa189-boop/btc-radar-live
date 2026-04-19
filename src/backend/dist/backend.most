@@ -1,0 +1,15 @@
+// Version: 1.0.0
+type Candle__823835442 =
+  {close : Float; high : Float; low : Float; open : Float; timestamp : Int};
+type Nat__490723111 = Nat__920180692;
+type Nat__920180692 = Nat;
+actor {
+  stable latestPrice :
+    {var inr : Float; var lastUpdated : Int; var usd : Float};
+  stable ohlcHistory :
+    {
+      var blockIndex : Nat__490723111;
+      var blocks : [var [var ?Candle__823835442]];
+      var elementIndex : Nat__490723111
+    }
+};

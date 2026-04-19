@@ -1,0 +1,22 @@
+{
+  "overview": "A real-time Bitcoin dashboard with live candlestick charts, dual USD/INR price display, news sentiment analysis, and a stunning Binance-inspired dark theme.",
+  "features": [
+    "Live BTC price in USD and INR with auto-refresh every 30 seconds",
+    "Interactive candlestick chart with 30-candle OHLC history",
+    "Binance dark theme with green/red candle colors",
+    "News sentiment analysis feed with 5 latest Bitcoin articles",
+    "Live connection status and refresh countdown timer",
+    "Smooth price update animations and transitions"
+  ],
+  "category": "finance",
+  "tags": [
+    "bitcoin",
+    "crypto",
+    "dashboard",
+    "candlestick",
+    "live-price",
+    "sentiment",
+    "dark-theme"
+  ],
+  "last_updated": "2026-04-19T02:25:38.304Z"
+}
